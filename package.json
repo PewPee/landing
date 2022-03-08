@@ -1,0 +1,19 @@
+{
+  "name": "pewpee-landing",
+  "version": "1.0.0",
+  "description": "Landing page of music streming service PewPee.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PewPee/PewPee-Landing.git"
+  },
+  "author": "Daniel Taiakin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PewPee/PewPee-Landing/issues"
+  },
+  "homepage": "https://github.com/PewPee/PewPee-Landing#readme"
+}
