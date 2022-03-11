@@ -1,0 +1,389 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Helvetica', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin: 0;
+  color: white;
+  background-color: #171717;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+/* Navigation Bar */
+
+.nav-wrapper {
+  display: flex;
+  position: sticky;
+  width: 100%;
+  height: 66px;
+
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  max-width: 1060px;
+
+  align-items: center;
+}
+
+.main-logo {
+  width: 111px;
+  height: 32px;
+  /* background: url("../../public/assets/img/logo.png") no-repeat; */
+  background-position: center;
+  background-size: 100%;
+}
+
+.nav-links {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  padding: 10px 18px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links a:last-child {
+  margin: 0;
+}
+
+.nav-links a:last-child {
+  color: black;
+  background-color: white;
+  border-radius: 14px;
+}
+
+/* Navigation Bar */
+
+/* Footer */
+
+.footer-wrapper {
+  display: flex;
+  margin-top: 105px;
+  width: 100%;
+  height: 224px;
+  background-color: #242424;
+
+  padding: 50px 0px;
+
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  max-width: 1060px;
+
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+.footer-column-logo {
+  display: flex;
+  flex-direction: column;
+
+  flex: 0 1 290px;
+}
+
+.footer-column-logo .main-logo {
+  width: 142px;
+  height: 41px;
+}
+
+.footer-column h5 {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-size: 16px;
+}
+
+.footer-column ul, .footer-column ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column ul li {
+  line-height: 32px;
+
+  opacity: 0.5;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.2;
+}
+
+.footer-column ul li:hover {
+  opacity: 1;
+}
+
+.copyright {
+  margin-top: auto;
+  margin-bottom: 0;
+  opacity: 0.5;
+
+  font-size: 14px;
+}
+
+/* Footer */
+
+.main-wrapper {
+  display: flex;
+  width: 100%;
+
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  max-width: 1060px;
+
+  flex-direction: column;
+  align-items: center;
+  gap: 105px;
+}
+
+.iphone-main-image {
+  width: 756px;
+  height: 587px;
+  background: url("../../public/assets/img/pewpee-ios-main.png") no-repeat center;
+  background-size: 100%;
+}
+
+.main-title {
+  margin-top: -50px;
+  align-self: center;
+}
+
+.main-title h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 64px;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.content-section:first-child {
+  max-width: inherit;
+
+  flex-direction: row;
+  align-content: space-between;
+  gap: 15.97px;
+}
+
+.content-section h2 {
+  margin: 0px;
+  margin-bottom: 48px;
+  font-size: 64px;
+}
+
+.main-buttons-container {
+  display: flex;
+  margin-top: 60px;
+
+  align-content: space-between;
+  gap: 16px;
+}
+
+.bordered-button {
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 16px;
+
+  transition: 0.2s;
+}
+
+.bordered-button.ios-app-store {
+  padding-left: 44px;
+
+  background-image: url("../../public/assets/img/apple-logo.png");
+  background-repeat: no-repeat;
+  background-size: 15px 18px;
+  background-position: 20px 12px;
+}
+
+.bordered-button:hover {
+  box-shadow: 0px 0px 10px black;
+
+  transform: scale(1.1);
+}
+
+
+.why-block-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.why-block {
+  display: flex;
+  width: 342px;
+  height: 290px;
+  padding: 40px;
+  border-radius: 50px;
+  background-color: #242424;
+
+  flex-direction: column;
+}
+
+.why-block .why-icon {
+  width: 84px;
+  height: 84px;
+  border-radius: 42px;
+  background-color: #3D3D3D;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.why-block .why-icon.eyes {
+  background-image: url("../../public/assets/img/why-collection/why-eyes.png");
+}
+
+.why-block .why-icon.lock {
+  background-image: url("../../public/assets/img/why-collection/why-lock.png");
+}
+
+.why-block .why-icon.download {
+  background-image: url("../../public/assets/img/why-collection/why-download.png");
+}
+
+.why-block .why-icon.circle {
+  background-image: url("../../public/assets/img/why-collection/why-circle.png");
+}
+
+.why-block .why-icon.stars {
+  background-image: url("../../public/assets/img/why-collection/why-stars.png");
+}
+
+.why-block .why-icon.cloud {
+  background-image: url("../../public/assets/img/why-collection/why-cloud.png");
+}
+
+.why-block h3 {
+  margin: 0;
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+.why-block p {
+  margin: 0;
+  margin-top: 15px;
+}
+
+.iphones-demo-container {
+  display: flex;
+  margin-top: 60px;
+
+  gap: 34px;
+}
+
+.iphone-demo {
+  width: 264px;
+  height: 533px;
+  background: url("../../public/assets/img/devices/apple/iphone-artist.png") no-repeat center;
+  background-size: 100%;
+}
+
+.iphone-demo:nth-child(1) {
+  background-image: url("../../public/assets/img/devices/apple/iphone-charts.png");
+}
+
+.iphone-demo:nth-child(2) {
+  background-image: url("../../public/assets/img/devices/apple/iphone-profile.png");
+}
+
+.iphone-demo:nth-child(4) {
+  background-image: url("../../public/assets/img/devices/apple/iphone-songs.png");
+}
+
+.iphone-demo:nth-child(5) {
+  background-image: url("../../public/assets/img/devices/apple/iphone-playlist.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), not all, not all, not all {
+  .iphone-main-image {
+    background-image: url("../../public/assets/img/pewpee-ios-main@2x.png");
+  }
+
+  .bordered-button.ios-app-store {
+    background-image: url("../../public/assets/img/apple-logo@2x.png");
+  }
+
+  .why-block .why-icon.eyes {
+    background-image: url("../../public/assets/img/why-collection/why-eyes@2x.png");
+  }
+  
+  .why-block .why-icon.lock {
+    background-image: url("../../public/assets/img/why-collection/why-lock@2x.png");
+  }
+  
+  .why-block .why-icon.download {
+    background-image: url("../../public/assets/img/why-collection/why-download@2x.png");
+  }
+  
+  .why-block .why-icon.circle {
+    background-image: url("../../public/assets/img/why-collection/why-circle@2x.png");
+  }
+  
+  .why-block .why-icon.stars {
+    background-image: url("../../public/assets/img/why-collection/why-stars@2x.png");
+  }
+
+  .why-block .why-icon.cloud {
+    background-image: url("../../public/assets/img/why-collection/why-cloud@2x.png");
+  }
+
+  .iphone-demo:nth-child(1) {
+    background-image: url("../../public/assets/img/devices/apple/iphone-charts@2x.png");
+  }
+
+  .iphone-demo:nth-child(2) {
+    background-image: url("../../public/assets/img/devices/apple/iphone-profile@2x.png");
+  }
+
+  .iphone-demo:nth-child(3) {
+    background-image: url("../../public/assets/img/devices/apple/iphone-artist@2x.png");
+  }
+
+  .iphone-demo:nth-child(4) {
+    background-image: url("../../public/assets/img/devices/apple/iphone-songs@2x.png");
+  }
+
+  .iphone-demo:nth-child(5) {
+    background-image: url("../../public/assets/img/devices/apple/iphone-playlist@2x.png");
+  }
+}
