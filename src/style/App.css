@@ -3,6 +3,10 @@
   font-family: 'Helvetica', 'Helvetica Neue', sans-serif;
 }
 
+.line-break {
+  white-space: pre-wrap;
+}
+
 body {
   margin: 0;
   color: white;
@@ -11,6 +15,16 @@ body {
 
 .wrapper {
   min-height: 100%;
+}
+
+.dev-page-content-wrap {
+  width: 100%;
+  max-width: 800px;
+}
+
+.dev-page-content {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 /* Navigation Bar */

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
     return (
         <footer className="footer-wrapper">
@@ -24,8 +26,8 @@ export default function Footer() {
                 <div className="footer-column">
                     <h5>Legal</h5>
                     <ul>
-                        <li>Privacy Policy</li>
-                        <li>Terms of Use</li>
+                        <li><Link to='/privacy'>Privacy Policy</Link></li>
+                        <li><Link to='/terms'>Terms of Use</Link></li>
                     </ul>
                 </div>
                 <div className="footer-column">
