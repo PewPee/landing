@@ -6,7 +6,7 @@ const markdown = `
 
 This Privacy Policy ("Policy") describes how PewPee ("PewPee", "we", "us" or "our") collects, protects
 and uses the personally identifiable information ("Personal Information") you ("User", "you" or "your")
-may provide on the [https://pewpee.com](https://pewpee.com) website and any of its products or services
+may provide on the **[https://pewpee.com](https://pewpee.com)** website and any of its products or services
 (generally, "Services"). It also describes the choices available to you regarding our use of your Personal
 Information and how you can access and update this information.
 
@@ -17,7 +17,8 @@ Information and how you can access and update this information.
 
 #### 1.2 Terms of Service
 
-
+We have our Terms of Service, which describes the terms under which you use uour Services and which is
+available at **[https://pewpee.com/terms](https://pewpee.com/terms)**.
 
 ### 2. Automatic collection of information
 
@@ -152,23 +153,24 @@ We hope that you are enjoying PewPee.
 
 ---
 
-This document was last updated on May 28, 2021
+This document was last updated on May 28, 2021.
 `
 
 function PrivacyPage() {
-    return (
-      <div className="main">
-        <div className="dev-page-content-wrap">
-          <h1>Privacy Policy</h1>
-          <div className="dev-page-content">
-            
-            <ReactMarkdown>
-                {markdown}
-            </ReactMarkdown>
-          </div>
+  return (
+    <div className="main">
+      <div className="container dev-page-content-wrap">
+        <h1>Privacy Policy</h1>
+        <div className="dev-page-content">
+          
+          <ReactMarkdown>
+            {markdown}
+          </ReactMarkdown>
+
         </div>
       </div>
-    )
+    </div>
+  )
 }
 
 export default PrivacyPage;

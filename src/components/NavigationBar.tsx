@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function NavigationBar() {
     return (
         <header className="nav-wrapper">
-            <div className="nav">
+            <div className="container nav">
                 <Link to='/'>
                     <img className="main-logo" src="./assets/img/logo.svg" alt="PewPee logo" draggable="false" />
                 </Link>

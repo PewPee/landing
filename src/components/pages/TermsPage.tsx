@@ -95,24 +95,25 @@ relating to it, you may send an email to support@pewpee.com
 
 ---
 
-This document was last updated on November 30, 2019
+This document was last updated on November 30, 2019.
 
 `
 
 function PrivacyPage() {
-    return (
-      <div className="main">
-        <div className="dev-page-content-wrap">
+  return (
+    <div className="main">
+      <div className="dev-page-content-wrap">
           <h1>Terms of Use</h1>
           <div className="dev-page-content">
-            
-            <ReactMarkdown>
-                {markdown}
-            </ReactMarkdown>
-          </div>
+          
+          <ReactMarkdown>
+            {markdown}
+          </ReactMarkdown>
+
         </div>
       </div>
-    )
+    </div>
+  )
 }
 
 export default PrivacyPage;

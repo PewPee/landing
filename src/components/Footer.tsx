@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
     return (
         <footer className="footer-wrapper">
-            <div className="footer">
+            <div className="container footer">
                 <div className="footer-column footer-column-logo">
                     <img className="main-logo" src="./assets/img/logo.svg" alt="PewPee logo" draggable="false" />
                     <a className="copyright" href="https://t.me/taiakindaniel" rel="nofollow" target="_blank">© Daniel Taiakin</a>
@@ -37,6 +37,20 @@ export default function Footer() {
                         <li><a href="https://twitter.com/PewPeeMusic">Twitter</a></li>
                         <li><a href="https://www.instagram.com/pewpee.music" rel="nofollow" target="_blank">Instagram</a></li>
                     </ul>
+                </div>
+            </div>
+            <div className="footer-mobile">
+                <div className="footer-column">
+                    <h5>FAQ</h5>
+                </div>
+                <div className="footer-column">
+                    <h5>Download</h5>
+                </div>
+                <div className="footer-column">
+                    <h5>Blog</h5>
+                </div>
+                <div className="footer-column">
+                    <h5>Twitter</h5>
                 </div>
             </div>
         </footer>

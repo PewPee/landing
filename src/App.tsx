@@ -16,7 +16,7 @@ function App() {
 
       <main className="main-wrapper">
         <Routes>
-        <Route path="*" element={<Main />} />
+          <Route path="*" element={<Main />} />
           <Route path="/" element={<Main />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
@@ -30,7 +30,7 @@ function App() {
 
 function Main() {
   return (
-    <div className="main">
+    <div className="container main">
       <div className="content-section">
         <div className="main-title">
           <div>

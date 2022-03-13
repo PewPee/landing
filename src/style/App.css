@@ -3,10 +3,6 @@
   font-family: 'Helvetica', 'Helvetica Neue', sans-serif;
 }
 
-.line-break {
-  white-space: pre-wrap;
-}
-
 body {
   margin: 0;
   color: white;
@@ -17,6 +13,12 @@ body {
   min-height: 100%;
 }
 
+.container {
+  padding: 0 16px;
+  width: 100%;
+  max-width: 1092px;
+}
+
 .dev-page-content-wrap {
   width: 100%;
   max-width: 800px;
@@ -25,6 +27,24 @@ body {
 .dev-page-content {
   font-size: 14px;
   line-height: 1.5;
+}
+
+.dev-page-content ul {
+  padding-left: 22px;
+}
+
+.dev-page-content hr {
+  margin: 22px 0;
+  border: 0.5px solid rgb(41, 41, 41);
+}
+
+.dev-page-content a {
+  color: rgb(80, 162, 230);
+  text-decoration: none;
+}
+
+.dev-page-content a:hover {
+  text-decoration: underline;
 }
 
 /* Navigation Bar */
@@ -40,9 +60,6 @@ body {
 
 .nav {
   display: flex;
-  width: 100%;
-  max-width: 1060px;
-
   align-items: center;
 }
 
@@ -86,7 +103,6 @@ body {
   display: flex;
   margin-top: 105px;
   width: 100%;
-  height: 224px;
   background-color: #242424;
 
   padding: 50px 0px;
@@ -96,14 +112,16 @@ body {
 
 .footer {
   display: flex;
-  width: 100%;
-  max-width: 1060px;
 
   align-items: center;
   flex-wrap: nowrap;
   align-content: stretch;
   align-items: stretch;
   justify-content: space-between;
+}
+
+.footer-mobile {
+  display: none;
 }
 
 .footer-column {
@@ -173,8 +191,6 @@ body {
 
 .main {
   display: flex;
-  width: 100%;
-  max-width: 1060px;
 
   flex-direction: column;
   align-items: center;
@@ -182,15 +198,68 @@ body {
 }
 
 .iphone-main-image {
+  position: relative;
   width: 756px;
   height: 587px;
   background: url("../../public/assets/img/pewpee-ios-main.png") no-repeat center;
   background-size: 100%;
+
+  animation: FadeIn-MoveLeft 3s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 0.2s;
 }
 
 .main-title {
   margin-top: -50px;
   align-self: center;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes FadeIn-MoveLeft {
+  0% {
+    opacity: 0;
+    bottom: -100px;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+
+.main-title h3 {
+  margin: 20px;
+  animation: FadeIn 1s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.main-buttons-container {
+  animation: FadeIn 1s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+
+.main-title h3:nth-child(1) { animation-delay: 1.5s }
+.main-title h3:nth-child(2) { animation-delay: 2s }
+.main-title h3:nth-child(3) { animation-delay: 2.5s }
+
+@keyframes effect-appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .main-title h3 {
@@ -260,6 +329,7 @@ body {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .why-block {
@@ -346,6 +416,122 @@ body {
 
 .iphone-demo:nth-child(5) {
   background-image: url("../../public/assets/img/devices/apple/iphone-playlist.png");
+}
+
+@media (max-width: 1092px) {
+  /* .content-section:first-child {
+    flex-direction: column-reverse;
+    gap: 40px;
+  
+    text-align: center;
+  } */
+
+  /* .main-buttons-container .bordered-button {
+    width: 150px;
+  } */
+
+  .container {
+    max-width: 750px;
+  }
+
+  .content-section:first-child {
+    max-width: 718px;
+  }
+
+  .main-title h3 {
+    font-size: 48px;
+  }
+
+  .iphone-main-image {
+    /* margin-top: 20px; */
+    /* margin-left: -57px; */
+    width: 573px;
+    height: 440.25px;
+  }
+
+  .main-title {
+    margin-top: 0;
+  }
+
+  .content-section h2 {
+    font-size: 36px;
+  }
+
+  .footer-wrapper {
+    padding: 16px 0px;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .footer-column h5 {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .footer-mobile {
+    display: flex;
+
+    align-content: space-between;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-section:first-child {
+    flex-direction: column-reverse;
+    gap: 40px;
+  
+    text-align: center;
+  }
+
+  .main-buttons-container .bordered-button {
+    width: 130px;
+  }
+
+  .main-title h3 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links a:nth-child(-n + 1) {
+    display: none;
+  }
+
+  .iphone-main-image {
+    margin-top: 20px;
+    margin-left: -57px;
+    width: 448.13px;
+    height: 347.96px;
+  }
+
+  .main-title {
+    margin-top: 30px;
+  }
+
+  .main-title h3 {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* .container {
+    max-width: 1092px;
+  } */
+
+  /* .content-section:first-child {
+    max-width: 1092px;
+  } */
+
+  /* .iphone-main-image {
+    width: 756px;
+    height: 587px;
+  } */
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), not all, not all, not all {
