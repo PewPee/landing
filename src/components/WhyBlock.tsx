@@ -1,4 +1,4 @@
-export default function WHyBlock(props: {title: string, desc: string, icon: string}) {
+export default function WhyBlock(props: {title: string, desc: string, icon: string}) {
     return (
         <div className="why-block">
             <div className={"why-icon " + props.icon}></div>

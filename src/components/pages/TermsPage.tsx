@@ -110,7 +110,7 @@ function PrivacyPage() {
             {markdown}
           </ReactMarkdown>
 
-        </div>
+          </div>
       </div>
     </div>
   )

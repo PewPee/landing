@@ -9,7 +9,7 @@ export default function NavigationBar() {
                 </Link>
                 <div className="nav-links">
                     <a href="https://twitter.com/PewPeeMusic" target="_blank" rel="noreferrer">Twitter</a>
-                    <a href="">Login</a>
+                    {/* <a href="">Login</a> */}
                 </div>
             </div>
         </header>
