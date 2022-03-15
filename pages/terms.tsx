@@ -1,4 +1,7 @@
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown'
+import docStyles from '../styles/Docs.module.css'
+
+import Layout from '../components/layout'
 
 const markdown = `
 ### 1. Terms and conditions
@@ -99,21 +102,21 @@ This document was last updated on November 30, 2019.
 
 `
 
-function PrivacyPage() {
+export default function Terms() {
   return (
-    <div className="main">
-      <div className="dev-page-content-wrap">
+    <Layout>
+      <div className="main">
+        <div className={`container ${docStyles.devPageContentWrap}`}>
           <h1>Terms of Use</h1>
-          <div className="dev-page-content">
+          <div className={docStyles.devPageContent}>
           
           <ReactMarkdown>
             {markdown}
           </ReactMarkdown>
 
           </div>
+        </div>
       </div>
-    </div>
+    </Layout>
   )
 }
-
-export default PrivacyPage;

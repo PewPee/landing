@@ -1,5 +1,7 @@
-import ReactMarkdown from 'react-markdown';
-// import remarkGfm from 'remark-gfm';
+import ReactMarkdown from 'react-markdown'
+import docStyles from '../styles/Docs.module.css'
+
+import Layout from '../components/layout'
 
 const markdown = `
 ### 1. Introduction
@@ -156,21 +158,21 @@ We hope that you are enjoying PewPee.
 This document was last updated on May 28, 2021.
 `
 
-function PrivacyPage() {
+export default function Privacy() {
   return (
-    <div className="main">
-      <div className="container dev-page-content-wrap">
-        <h1>Privacy Policy</h1>
-        <div className="dev-page-content">
-          
-          <ReactMarkdown>
-            {markdown}
-          </ReactMarkdown>
+    <Layout>
+      <div className="main">
+        <div className={`container ${docStyles.devPageContentWrap}`}>
+          <h1>Privacy Policy</h1>
+          <div className={docStyles.devPageContent}>
+            
+            <ReactMarkdown>
+              {markdown}
+            </ReactMarkdown>
 
+          </div>
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }
-
-export default PrivacyPage;

@@ -1,0 +1,84 @@
+.whyBlock {
+    display: flex;
+    width: 342px;
+    height: 290px;
+    padding: 40px;
+    border-radius: 50px;
+    background-color: #242424;
+
+    flex-direction: column;
+}
+
+.whyBlock .whyIcon {
+    width: 84px;
+    height: 84px;
+    border-radius: 42px;
+    background-color: #3D3D3D;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.whyIcon.eyes {
+    background-image: url("/img/why-collection/why-eyes.png");
+}
+
+.whyIcon.lock {
+    background-image: url("/img/why-collection/why-lock.png");
+}
+
+.whyIcon.download {
+    background-image: url("/img/why-collection/why-download.png");
+}
+
+.whyIcon.circle {
+    background-image: url("/img/why-collection/why-circle.png");
+}
+
+.whyIcon.stars {
+    background-image: url("/img/why-collection/why-stars.png");
+}
+
+.whyIcon.cloud {
+    background-image: url("/img/why-collection/why-cloud.png");
+}
+
+.whyBlock h3 {
+    margin: 0;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.whyBlock p {
+    margin: 0;
+    margin-top: 15px;
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), not all, not all, not all {
+
+    .whyIcon.eyes {
+        background-image: url("/img/why-collection/why-eyes@2x.png");
+    }
+
+    .whyIcon.lock {
+        background-image: url("/img/why-collection/why-lock@2x.png");
+    }
+
+    .whyIcon.download {
+        background-image: url("/img/why-collection/why-download@2x.png");
+    }
+
+    .whyIcon.circle {
+        background-image: url("/img/why-collection/why-circle@2x.png");
+    }
+
+    .whyIcon.stars {
+        background-image: url("/img/why-collection/why-stars@2x.png");
+    }
+
+    .whyIcon.cloud {
+        background-image: url("/img/why-collection/why-cloud@2x.png");
+    }
+
+}

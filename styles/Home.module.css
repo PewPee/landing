@@ -1,0 +1,252 @@
+.contentSection {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.contentSection:first-child {
+  max-width: inherit;
+
+  flex-direction: row;
+  align-content: space-between;
+  gap: 15.97px;
+}
+
+.contentSection h2 {
+  margin: 0px;
+  margin-bottom: 48px;
+  font-size: 64px;
+}
+
+
+.mainButtonsContainer {
+  display: flex;
+  margin-top: 60px;
+
+  align-content: space-between;
+  gap: 16px;
+}
+
+.borderedButton {
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 16px;
+
+  transition: 0.2s;
+}
+
+.borderedButton.iosAppStore {
+  padding-left: 44px;
+
+  background-image: url("/img/apple-logo.png");
+  background-repeat: no-repeat;
+  background-size: 15px 18px;
+  background-position: 20px 12px;
+}
+
+.borderedButton:hover {
+  box-shadow: 0px 0px 10px black;
+
+  transform: scale(1.1);
+}
+
+.iphoneMainImage {
+  position: relative;
+  width: 756px;
+  height: 587px;
+  background: url("/img/pewpee-ios-main.png") no-repeat center;
+  background-size: 100%;
+
+  animation: FadeIn-MoveLeft 3s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 0.2s;
+}
+
+.whyBlockContainer {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.iphonesDemoContainer {
+  display: flex;
+  margin-top: 60px;
+  width: 2000px;
+
+  justify-content: center;
+  gap: 34px;
+}
+
+.iphoneDemo {
+  width: 264px;
+  height: 533px;
+  background: url("/img/devices/apple/iphone-artist.png") no-repeat center;
+  background-size: 100%;
+}
+
+.iphoneDemo:nth-child(1) {
+  background-image: url("/img/devices/apple/iphone-charts.png");
+}
+
+.iphoneDemo:nth-child(2) {
+  background-image: url("/img/devices/apple/iphone-profile.png");
+}
+
+.iphoneDemo:nth-child(4) {
+  background-image: url("/img/devices/apple/iphone-songs.png");
+}
+
+.iphoneDemo:nth-child(5) {
+  background-image: url("/img/devices/apple/iphone-playlist.png");
+}
+
+
+.mainTitle {
+  margin-top: -50px;
+  align-self: center;
+}
+
+.mainTitle h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 64px;
+
+  animation: FadeIn 1s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.mainButtonsContainer {
+  animation: FadeIn 1s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+
+.mainTitle h3:nth-child(1) { animation-delay: 1.5s }
+.mainTitle h3:nth-child(2) { animation-delay: 2s }
+.mainTitle h3:nth-child(3) { animation-delay: 2.5s }
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes FadeIn-MoveLeft {
+  0% {
+    opacity: 0;
+    bottom: -100px;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+
+
+@media (max-width: 1092px) {
+
+  .contentSection:first-child {
+    max-width: 718px;
+  }
+
+  .mainTitle h3 {
+    font-size: 48px;
+  }
+
+  .iphoneMainImage {
+    width: 573px;
+    height: 440.25px;
+  }
+
+  .mainTitle {
+    margin-top: 0;
+  }
+
+  .contentSection h2 {
+    font-size: 36px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .contentSection:first-child {
+    flex-direction: column-reverse;
+    gap: 40px;
+  
+    text-align: center;
+  }
+
+  .mainButtonsContainer .borderedButton {
+    width: 130px;
+  }
+
+  .mainTitle h3 {
+    font-size: 48px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .iphoneMainImage {
+    margin-top: 20px;
+    margin-left: -57px;
+    width: 448.13px;
+    height: 347.96px;
+  }
+
+  .mainTitle {
+    margin-top: 30px;
+  }
+
+  .mainTitle h3 {
+    font-size: 48px;
+  }
+
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), not all, not all, not all {
+
+  .iphoneMainImage {
+    background-image: url("/img/pewpee-ios-main@2x.png");
+  }
+
+  .borderedButton.iosAppStore {
+    background-image: url("/img/apple-logo@2x.png");
+  }
+
+  .iphoneDemo:nth-child(1) {
+    background-image: url("/img/devices/apple/iphone-charts@2x.png");
+  }
+
+  .iphoneDemo:nth-child(2) {
+    background-image: url("/img/devices/apple/iphone-profile@2x.png");
+  }
+
+  .iphoneDemo:nth-child(3) {
+    background-image: url("/img/devices/apple/iphone-artist@2x.png");
+  }
+
+  .iphoneDemo:nth-child(4) {
+    background-image: url("/img/devices/apple/iphone-songs@2x.png");
+  }
+
+  .iphoneDemo:nth-child(5) {
+    background-image: url("/img/devices/apple/iphone-playlist@2x.png");
+  }
+
+}

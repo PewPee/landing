@@ -1,0 +1,27 @@
+.devPageContentWrap {
+    width: 100%;
+    max-width: 800px;
+}
+  
+.devPageContent {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.devPageContent ul {
+    padding-left: 22px;
+}
+
+.devPageContent hr {
+    margin: 22px 0;
+    border: 0.5px solid rgb(41, 41, 41);
+}
+
+.devPageContent a {
+    color: rgb(80, 162, 230);
+    text-decoration: none;
+}
+
+.devPageContent a:hover {
+    text-decoration: underline;
+}
