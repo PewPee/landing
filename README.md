@@ -29,9 +29,9 @@ npm run start
 
 > Tip: You can customize the start script in package.json to accept a PORT parameter by updating it as: "start": "next start -p $PORT".
 
-#### Deploying
+### Deploying
 
-##### Using Docker
+#### Using Docker
 
 Deploy by Docker using these commands:
 ```lang=bash
