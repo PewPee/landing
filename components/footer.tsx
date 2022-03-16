@@ -2,12 +2,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import fooStyles from './footer.module.css'
 
+import logo from '../public/img/logo.svg'
+
 export default function Footer() {
   return (
     <footer className={fooStyles.footerWrapper}>
       <div className={`container ${fooStyles.footer}`}>
         <div className={fooStyles.footerColumn+" "+fooStyles.footerColumnLogo}>
-          <Image src="/img/logo.svg" width={142} height={41} alt="PewPee logo" draggable="false" />
+          <Image src={logo} width={142} height={41} alt="PewPee logo" draggable="false" />
           <a className={fooStyles.copyright} href="https://t.me/taiakindaniel" rel="nofollow noreferrer" target="_blank">© Daniel Taiakin</a>
         </div>
         <div className={fooStyles.footerColumn}>

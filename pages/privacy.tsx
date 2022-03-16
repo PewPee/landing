@@ -1,4 +1,6 @@
 import ReactMarkdown from 'react-markdown'
+
+import Head from 'next/head'
 import docStyles from '../styles/Docs.module.css'
 
 import Layout from '../components/layout'
@@ -161,6 +163,33 @@ This document was last updated on May 28, 2021.
 export default function Privacy() {
   return (
     <Layout>
+      <Head>
+        <title>PewPee – Privacy Policy</title>
+        <meta name="robots" content="all" />
+        <meta name="keywords" content="PewPee, tracks, music, listen, popular, free, online, songs, player" />
+        <meta name="description" content="PewPee is a music streaming service that allows listen to new popular songs 2022 for free online without downloading and you can try to listen to latest albums of artists on our free music player" />
+        
+        <meta property="og:site_name" content="PewPee" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="PewPee – Terms and Conditions of Use" />
+        <meta property="og:description" content="PewPee is a music streaming service that allows you to listen to music for free." />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@pewpee_music" />
+        <meta name="twitter:creator" content="@pewpee_music" />
+        
+        <meta property="og:url" content="https://pewpee.com/en/" />
+        <meta property="og:image" content="https://pewpee.com/visualization/icons/common-icon.png" />
+        <meta property="og:image:type" content="image/png" />
+
+        {/* <link rel="alternate" hreflang="x-default" href="https://pewpee.com/en/" />
+        <link rel="alternate" hreflang="ru" href="https://pewpee.com/ru/" /> */}
+        <link rel="canonical" href="https://pewpee.com/" />
+        <link rel="icon" type="images/svg+xml" href="/visualization/icons/website_icon.svg?1" />
+        <link rel="alternate icon" type="images/png" href="/visualization/icons/favicon.png?1" />
+        <link rel="apple-touch-icon" href="/visualization/icons/icon-logo.png" />
+      </Head>
+
       <div className="main">
         <div className={`container ${docStyles.devPageContentWrap}`}>
           <h1>Privacy Policy</h1>
