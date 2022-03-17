@@ -23,15 +23,15 @@ export default function Footer() {
         <div className={fooStyles.footerColumn}>
           <h5>Apps</h5>
           <ul>
-            <li>iPhone/iPad</li>
-            <li>Web</li>
+            <li><a href="https://apps.apple.com/us/app/pewpee/id1483338834" rel="noreferrer" target="_blank">iPhone/iPad</a></li>
+            <li><a href="/en/login">Web</a></li>
           </ul>
         </div>
         <div className={fooStyles.footerColumn}>
           <h5>Legal</h5>
           <ul>
-            <li><Link href='/privacy'>Privacy Policy</Link></li>
-            <li><Link href='/terms'>Terms of Use</Link></li>
+            <li><Link href="/privacy"><a href="/privacy">Privacy Policy</a></Link></li>
+            <li><Link href="/terms"><a href="/terms">Terms of Use</a></Link></li>
           </ul>
         </div>
         <div className={fooStyles.footerColumn}>
@@ -44,17 +44,20 @@ export default function Footer() {
         </div>
       </div>
       <div className={fooStyles.footerMobile}>
-        <div className={fooStyles.footerColumn}>
+        {/* <div className={fooStyles.footerColumn}>
             <h5>FAQ</h5>
+        </div> */}
+        <div className={fooStyles.footerColumn}>
+          <h5><a href="https://apps.apple.com/us/app/pewpee/id1483338834" rel="noreferrer" target="_blank">Download</a></h5>
         </div>
         <div className={fooStyles.footerColumn}>
-            <h5>Download</h5>
+          <h5><a href="/en/login">Web</a></h5>
         </div>
+        {/* <div className={fooStyles.footerColumn}>
+          <h5>Blog</h5>
+        </div> */}
         <div className={fooStyles.footerColumn}>
-            <h5>Blog</h5>
-        </div>
-        <div className={fooStyles.footerColumn}>
-            <h5>Twitter</h5>
+          <h5><a href="https://twitter.com/PewPeeMusic" rel="nofollow noreferrer" target="_blank">Twitter</a></h5>
         </div>
       </div>
     </footer>

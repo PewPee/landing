@@ -1,0 +1,11 @@
+{
+	"applinks": {
+		"apps": [],
+		"details": [
+		{
+			"appID": "A34YZJRPR9.main.PewPee",
+			"paths": ["/user", "/artist", "/album", "/playlist"]
+		}
+		]
+	}
+}

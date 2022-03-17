@@ -36,7 +36,7 @@ npm run start
 Deploy by Docker using these commands:
 ```lang=bash
 docker build -t pewpee-landing .
-docker run -p 3000:3000 pewpee-landing
+docker run -d -p 3000:3000 pewpee-landing
 ```
 
 ### Licensing

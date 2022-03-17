@@ -1,14 +1,12 @@
 // import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
+// import Image from 'next/image'
+// import Link from 'next/link'
 import homeStyles from '../styles/Home.module.css'
 import whyStyles from '../components/whyblock.module.css'
 
 import Layout from '../components/layout'
 import WhyBlock from '../components/whyblock'
-
-
 
 export default function Home() {
   const whyData: {title: string, desc: string, icon: string}[] = [
@@ -30,26 +28,26 @@ export default function Home() {
         
         <meta property="og:site_name" content="PewPee" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Listen to music on PewPee for free" />
-        <meta property="og:description" content="PewPee — music streaming service that allows you to listen to music for free." />
+        <meta property="og:title" content="PewPee – music streaming service" />
+        <meta property="og:description" content="Powerful. Free. Zero ads." />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@pewpee_music" />
-        <meta name="twitter:creator" content="@pewpee_music" />
+        <meta name="twitter:site" content="@PewPeeMusic" />
+        <meta name="twitter:creator" content="@PewPeeMusic" />
+
+        <meta name="telegram:channel" content="@pewpee_music" />
 
         <meta property="og:url" content="https://pewpee.com/" />
-        <meta property="og:image" content="https://pewpee.com/visualization/icons/common-icon.png" />
+        <meta property="og:image" content="/common-icon.png" />
         <meta property="og:image:type" content="image/png" />
 
         {/* <link rel="alternate" hreflang="x-default" href="https://pewpee.com/en/" />
         <link rel="alternate" hreflang="ru" href="https://pewpee.com/ru/" /> */}
 
         <link rel="canonical" href="https://pewpee.com/" />
-        <link rel="icon" type="images/svg+xml" href="/visualization/icons/website_icon.svg?1" />
-        <link rel="alternate icon" type="images/png" href="/visualization/icons/favicon.png?1" />
-        <link rel="apple-touch-icon" href="/visualization/icons/icon-logo.png" />
-        
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" type="images/svg+xml" href="/website-icon.svg?1" />
+        <link rel="alternate icon" type="images/png" href="/website-icon.png?1" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>
 
       <div className="container main">
@@ -61,8 +59,8 @@ export default function Home() {
               <h3>Zero ads.</h3>
             </div>
             <div className={homeStyles.mainButtonsContainer}>
-              <a className={homeStyles.borderedButton} href="">Download</a>
-              <a className={homeStyles.borderedButton} href="">Web</a>
+              <a className={homeStyles.borderedButton} href="https://apps.apple.com/us/app/pewpee/id1483338834" rel="noreferrer" target="_blank">Download</a>
+              <a className={homeStyles.borderedButton} href="/en/login">Web</a>
             </div>
           </div>
           <div className={homeStyles.iphoneMainImage} />
@@ -79,7 +77,12 @@ export default function Home() {
 
         <div className={homeStyles.contentSection}>
           <h2>Don’t wait, try now!</h2>
-          <a className={homeStyles.borderedButton+" "+homeStyles.iosAppStore} href="">Download for iPhone / iPad</a>
+          <a
+            className={homeStyles.borderedButton+" "+homeStyles.iosAppStore}
+            href="https://apps.apple.com/us/app/pewpee/id1483338834"
+            rel="noreferrer"
+            target="_blank"
+          >Download for iPhone / iPad</a>
           <div className={homeStyles.iphonesDemoContainer}>
               {[...Array(5)].map(_ =>
                 <div key="" className={homeStyles.iphoneDemo} />
