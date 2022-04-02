@@ -62,9 +62,9 @@
   background: url("/img/pewpee-ios-main.png") no-repeat center;
   background-size: 100%;
 
-  animation: FadeIn-MoveLeft 3s ease-in-out;
-  animation-fill-mode: both;
-  animation-delay: 0.2s;
+  /* animation: FadeIn-MoveLeft 3s ease-in-out; */
+  /* animation-fill-mode: both; */
+  /* animation-delay: 0.2s; */
 }
 
 .whyBlockContainer {
@@ -118,19 +118,19 @@
   padding: 0;
   font-size: 64px;
 
-  animation: FadeIn 0.5s ease-in-out;
-  animation-fill-mode: both;
+  /* animation: FadeIn 0.5s ease-in-out; */
+  /* animation-fill-mode: both; */
 }
 
-.mainButtonsContainer {
+/* .mainButtonsContainer {
   animation: FadeIn 0.5s ease-in-out;
   animation-fill-mode: both;
   animation-delay: 2.5s;
-}
+} */
 
-.mainTitle h3:nth-child(1) { animation-delay: 1s }
+/* .mainTitle h3:nth-child(1) { animation-delay: 1s }
 .mainTitle h3:nth-child(2) { animation-delay: 1.5s }
-.mainTitle h3:nth-child(3) { animation-delay: 2s }
+.mainTitle h3:nth-child(3) { animation-delay: 2s } */
 
 @keyframes FadeIn {
   0% {
