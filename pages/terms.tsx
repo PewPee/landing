@@ -128,11 +128,9 @@ export default function Terms() {
         <meta property="og:image" content="/common-icon.png" />
         <meta property="og:image:type" content="image/png" />
 
-        {/* <link rel="alternate" hreflang="x-default" href="https://pewpee.com/en/"/> */}
-        {/* <link rel="alternate" hreflang="ru" href="https://pewpee.com/ru/"/> */}
         <link rel="canonical" href="https://pewpee.com/" />
         <link rel="icon" type="images/svg+xml" href="/website-icon.svg?1" />
-        <link rel="alternate icon" type="images/png" href="/website-icon.png?1" />
+        <link rel="alternate icon" type="image/x-icon" href="/favicon.ico?1" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>
 
