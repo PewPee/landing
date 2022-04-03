@@ -1,15 +1,31 @@
 .contentSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 
-  align-items: center;
+  -webkit-box-align: center;
+
+      -ms-flex-align: center;
+
+          align-items: center;
 }
 
 .contentSection:first-child {
   max-width: inherit;
 
-  flex-direction: row;
-  align-content: space-between;
+  -webkit-box-orient: horizontal;
+
+  -webkit-box-direction: normal;
+
+      -ms-flex-direction: row;
+
+          flex-direction: row;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
   gap: 15.97px;
 }
 
@@ -21,10 +37,14 @@
 
 
 .mainButtonsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 60px;
 
-  align-content: space-between;
+  -ms-flex-line-pack: justify;
+
+      align-content: space-between;
   gap: 16px;
 }
 
@@ -36,6 +56,10 @@
   color: black;
   background-color: white;
   border-radius: 16px;
+
+  -webkit-transition: 0.2s;
+
+  -o-transition: 0.2s;
 
   transition: 0.2s;
 }
@@ -50,9 +74,14 @@
 }
 
 .borderedButton:hover {
-  box-shadow: 0px 0px 10px black;
+  -webkit-box-shadow: 0px 0px 10px black;
+          box-shadow: 0px 0px 10px black;
 
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+
+      -ms-transform: scale(1.1);
+
+          transform: scale(1.1);
 }
 
 .iphoneMainImage {
@@ -68,19 +97,30 @@
 }
 
 .whyBlockContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 
 .iphonesDemoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 60px;
   width: 2000px;
 
-  justify-content: center;
+  -webkit-box-pack: center;
+
+      -ms-flex-pack: center;
+
+          justify-content: center;
   gap: 34px;
 }
 
@@ -110,7 +150,9 @@
 
 .mainTitle {
   margin-top: -50px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .mainTitle h3 {
@@ -132,6 +174,16 @@
 .mainTitle h3:nth-child(2) { animation-delay: 1.5s }
 .mainTitle h3:nth-child(3) { animation-delay: 2s } */
 
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes FadeIn {
   0% {
     opacity: 0;
@@ -139,6 +191,18 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes FadeIn-MoveLeft {
+  0% {
+    opacity: 0;
+    bottom: -100px;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 0px;
   }
 }
 
@@ -183,7 +247,10 @@
 @media (max-width: 768px) {
 
   .contentSection:first-child {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     gap: 40px;
   
     text-align: center;

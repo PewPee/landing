@@ -1,4 +1,6 @@
 .whyBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 342px;
     height: 290px;
@@ -6,7 +8,13 @@
     border-radius: 50px;
     background-color: #242424;
 
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+
+    -webkit-box-direction: normal;
+
+        -ms-flex-direction: column;
+
+            flex-direction: column;
 }
 
 .whyBlock .whyIcon {
