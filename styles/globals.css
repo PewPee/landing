@@ -4,7 +4,17 @@ body {
   margin: 0;
   font-family: Helvetica, sans-serif;
   color: white;
-  background-color: #171717;
+  background-color: #111111;
+}
+
+::-moz-selection {
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+}
+
+::selection {
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
 }
 
 a {
