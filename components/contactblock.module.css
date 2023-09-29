@@ -30,11 +30,11 @@
 }
 
 .contactIcon.mail {
-  background-image: url("/mail.svg");
+  background-image: url("/img/mail.svg");
 }
 
 .contactIcon.megaphone {
-  background-image: url("/megaphone.svg");
+  background-image: url("/img/megaphone.svg");
 }
 
 .contactBlock h3 {
