@@ -17,7 +17,7 @@ export default function Footer() {
           <ul>
             <li>FAQ</li>
             <li>Blog</li>
-            <li>Jobs</li>
+            <li><Link href="/contact-us">Contact Us</Link></li>
           </ul>
         </div>
         <div className={fooStyles.footerColumn}>
@@ -58,6 +58,9 @@ export default function Footer() {
         </div> */}
         <div className={fooStyles.footerColumn}>
           <h5><a href="https://twitter.com/PewPeeMusic" rel="nofollow noreferrer" target="_blank">Twitter</a></h5>
+        </div>
+        <div className={fooStyles.footerColumn}>
+          <h5><a href="/contact-us">Contact Us</a></h5>
         </div>
       </div>
     </footer>
