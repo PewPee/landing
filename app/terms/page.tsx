@@ -1,9 +1,17 @@
+import type { Metadata } from 'next'
 import ReactMarkdown from 'react-markdown'
 
-import Head from 'next/head'
-import docStyles from '../styles/Docs.module.css'
+import docStyles from '../../styles/Docs.module.css'
 
-import Layout from '../components/layout'
+export const metadata: Metadata = {
+  title: 'Terms of Use',
+  description: 'PewPee Terms of Use: terms and conditions for using the PewPee music streaming app and services.',
+  openGraph: {
+    title: 'Terms of Use — PewPee',
+    description: 'Terms and conditions for using PewPee music app and services.',
+    url: 'https://pewpee.com/terms',
+  },
+}
 
 const markdown = `
 ### 1. Terms and conditions
@@ -63,12 +71,12 @@ Service or your possession and/or use of the Service, including: (1) product lia
 that the Service fails to conform to any applicable legal or regulatory requirement; and (3) claims arising
 under consumer protection or similar legislation. Apple is not responsible for the investigation, defense,
 settlement, and discharge of any third party claim that the Service and/or your possession and use of the App
-infringe that third party’s intellectual property rights. You agree to comply with any applicable third party
-terms, when using the Service. Apple, and Apple’s subsidiaries, are third party beneficiaries of this Agreement,
+infringe that third party's intellectual property rights. You agree to comply with any applicable third party
+terms, when using the Service. Apple, and Apple's subsidiaries, are third party beneficiaries of this Agreement,
 and upon your acceptance of this Agreement, Apple will have the right (and will be deemed to have accepted the
 right) to enforce this Agreement against you as a third party beneficiary of this Agreement. You hereby
 represent and warrant that (1) you are not located in a country that is subject to a U.S. Government embargo, or
-that has been designated by the U.S. Government as a “terrorist supporting” country; and (2) you are not listed
+that has been designated by the U.S. Government as a "terrorist supporting" country; and (2) you are not listed
 on any U.S. Government list of prohibited or restricted parties.
 
 ### 5. Links to other applications
@@ -100,52 +108,18 @@ relating to it, you may send an email to support@pewpee.com
 
 ---
 
-This document was last updated on November 30, 2019.
-
+This document was last updated on February 1, 2026.
 `
 
-export default function Terms() {
+export default function TermsPage() {
   return (
-    <Layout>
-      <Head>
-        <title>PewPee – Terms of Use</title>
-        <meta name="robots" content="all"/>
-        <meta name="keywords" content="PewPee, tracks, music, listen, popular, free, online, songs, player" />
-        <meta name="description" content="PewPee is a music streaming service that allows listen to new popular songs 2022 for free online without downloading and you can try to listen to latest albums of artists on our free music player" />
-        
-        <meta property="og:site_name" content="PewPee" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="PewPee – music streaming service" />
-        <meta property="og:description" content="Powerful. Free. Zero ads." />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@PewPeeMusic" />
-        <meta name="twitter:creator" content="@PewPeeMusic" />
-
-        <meta name="telegram:channel" content="@pewpee_music" />
-        
-        <meta property="og:url" content="https://pewpee.com/" />
-        <meta property="og:image" content="/common-icon.png" />
-        <meta property="og:image:type" content="image/png" />
-
-        <link rel="canonical" href="https://pewpee.com/" />
-        <link rel="icon" type="images/svg+xml" href="/website-icon.svg?1" />
-        <link rel="alternate icon" type="image/x-icon" href="/favicon.ico?1" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      </Head>
-
-      <div className="main">
-        <div className={`container ${docStyles.devPageContentWrap}`}>
-          <h1>Terms of Use</h1>
-          <div className={docStyles.devPageContent}>
-          
-          <ReactMarkdown>
-            {markdown}
-          </ReactMarkdown>
-
-          </div>
+    <div className="main">
+      <div className={`container ${docStyles.devPageContentWrap}`}>
+        <h1>Terms of Use</h1>
+        <div className={docStyles.devPageContent}>
+          <ReactMarkdown>{markdown}</ReactMarkdown>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }

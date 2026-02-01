@@ -16,7 +16,6 @@
 
 .contentSection:first-child {
   max-width: inherit;
-
   -webkit-box-orient: horizontal;
 
   -webkit-box-direction: normal;
@@ -26,13 +25,18 @@
           flex-direction: row;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  gap: 15.97px;
 }
 
 .contentSection h2 {
   margin: 0px;
   margin-bottom: 48px;
   font-size: 64px;
+}
+
+.cardsSectionTitle {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -49,40 +53,46 @@
 }
 
 .borderedButton {
+  position: relative;
   padding: 14px 20px;
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
-  color: black;
-  background-color: white;
-  border-radius: 16px;
-
-  -webkit-transition: 0.2s;
-
-  -o-transition: 0.2s;
-
-  transition: 0.2s;
+  color: #111;
+  background: #fff;
+  border: 0.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  -webkit-transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
 }
 
 .borderedButton.iosAppStore {
   padding-left: 44px;
+}
 
-  background-image: url("/img/apple-logo.png");
-  background-repeat: no-repeat;
-  background-size: 15px 18px;
-  background-position: 20px 12px;
+.borderedButton.iosAppStore::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  width: 15px;
+  height: 18px;
+  background: url("/img/apple-logo.png") no-repeat center;
+  background-size: contain;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .borderedButton:hover {
-  -webkit-box-shadow: 0px 0px 10px black;
-          box-shadow: 0px 0px 10px black;
-
-  -webkit-transform: scale(1.1);
-
-      -ms-transform: scale(1.1);
-
-          transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.92);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
 }
+
 
 .iphoneMainImage {
   position: relative;
@@ -90,22 +100,52 @@
   height: 587px;
   background: url("/img/pewpee-ios-main.png") no-repeat center;
   background-size: 100%;
+  flex-shrink: 0;
+  border-radius: 32px;
+}
 
-  /* animation: FadeIn-MoveLeft 3s ease-in-out; */
-  /* animation-fill-mode: both; */
-  /* animation-delay: 0.2s; */
+/* SEO: img for crawlers/screen readers, visually hidden */
+.heroImageSeo {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .whyBlockContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 16px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 900px) {
+  .whyBlockContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 620px) {
+  .whyBlockContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .whyBlockContainer {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -129,6 +169,15 @@
   height: 533px;
   background: url("/img/devices/apple/iphone-artist.png") no-repeat center;
   background-size: 100%;
+  border-radius: 28px;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.iphoneDemo:hover {
+  -webkit-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 .iphoneDemo:nth-child(1) {
@@ -149,19 +198,204 @@
 
 
 .mainTitle {
+  position: relative;
+  z-index: 1;
   margin-top: -50px;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  width: 300px;
+  flex-shrink: 0;
 }
 
+.mainTitle h1,
 .mainTitle h3 {
   margin: 0;
   padding: 0;
-  font-size: 64px;
+  font-size: 58px;
+}
 
-  /* animation: FadeIn 0.5s ease-in-out; */
-  /* animation-fill-mode: both; */
+.heroTagline {
+  margin: 16px 0 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.heroIntro {
+  margin: 12px 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 420px;
+}
+
+.mainTitle .mainButtonsContainer {
+  margin-top: 32px;
+}
+
+.socialProof {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 12px 24px;
+  margin-top: 28px;
+  padding: 16px 0;
+  white-space: nowrap;
+}
+
+.socialProofItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.socialProofStars {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: #fbbf24;
+}
+
+.socialProofRating {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.socialProofMeta {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.socialProofLabel {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.socialProofDivider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.faqSection {
+  align-items: stretch;
+}
+
+.faqTitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 48px;
+  line-height: 1.15;
+}
+
+.faqList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faqItem {
+  margin-bottom: 12px;
+  border-radius: 16px;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.faqItem:last-child {
+  margin-bottom: 0;
+}
+
+.faqQuestion {
+  padding: 18px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  list-style: none;
+}
+
+.faqQuestion::-webkit-details-marker {
+  display: none;
+}
+
+.faqQuestion::marker {
+  display: none;
+}
+
+.faqQuestion {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+
+.faqQuestion::after {
+  content: "+";
+  float: right;
+  font-size: 20px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.faqItemOpen .faqQuestion::after {
+  content: "−";
+}
+
+.faqAnswer {
+  margin: 0;
+  padding: 0 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.35s ease-out, opacity 0.3s ease-out, padding 0.35s ease-out;
+  transition: max-height 0.35s ease-out, opacity 0.3s ease-out, padding 0.35s ease-out;
+}
+
+.faqAnswer p {
+  margin: 0;
+  padding-bottom: 4px;
+}
+
+.faqItemOpen .faqAnswer {
+  max-height: 500px;
+  opacity: 1;
+  padding: 0 20px 18px 20px;
+}
+
+@media (max-width: 768px) {
+  .faqTitle {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  .faqQuestion {
+    padding: 16px 18px;
+    font-size: 16px;
+  }
+
+  .faqAnswer {
+    padding: 0 18px;
+    font-size: 14px;
+  }
+
+  .faqItemOpen .faqAnswer {
+    padding: 0 18px 16px 18px;
+  }
 }
 
 /* .mainButtonsContainer {
@@ -223,19 +457,31 @@
 
   .contentSection:first-child {
     max-width: 718px;
+    margin-right: 0px;
   }
 
-  .mainTitle h3 {
+  .mainTitle h1 {
     font-size: 48px;
+  }
+
+  .heroTagline {
+    font-size: 20px;
+  }
+
+  .heroIntro {
+    font-size: 15px;
+    max-width: 100%;
   }
 
   .iphoneMainImage {
     width: 573px;
     height: 440.25px;
+    margin-right: 0;
   }
 
   .mainTitle {
     margin-top: 0;
+    margin-right: -80px;
   }
 
   .contentSection h2 {
@@ -252,16 +498,40 @@
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     gap: 40px;
-  
+
     text-align: center;
   }
 
-  .mainButtonsContainer .borderedButton {
-    width: 130px;
+  .mainTitle {
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-right: 0px;
   }
 
-  .mainTitle h3 {
+  .mainTitle h1 {
     font-size: 48px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .mainButtonsContainer {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .mainButtonsContainer .borderedButton {
+    min-width: 200px;
+    white-space: nowrap;
+  }
+
+  .socialProof {
+    justify-content: center;
+    width: 100%;
   }
 
 }
@@ -277,10 +547,20 @@
 
   .mainTitle {
     margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  .mainTitle h3 {
-    font-size: 48px;
+  .mainTitle h1 {
+    font-size: 40px;
+  }
+
+  .heroTagline {
+    font-size: 18px;
+  }
+
+  .heroIntro {
+    font-size: 14px;
   }
 
 }
@@ -292,7 +572,7 @@
     background-image: url("/img/pewpee-ios-main@2x.png");
   }
 
-  .borderedButton.iosAppStore {
+  .borderedButton.iosAppStore::before {
     background-image: url("/img/apple-logo@2x.png");
   }
 

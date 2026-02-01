@@ -1,11 +1,20 @@
 import whyStyles from './whyblock.module.css'
 
-export default function WhyBlock(props: {title: string, desc: string, icon: string}) {
+type WhyBlockProps = {
+  title: string
+  desc: string
+  icon: React.ReactNode | string
+}
+
+export default function WhyBlock({ title, desc, icon }: WhyBlockProps) {
+  const isReactIcon = typeof icon !== 'string'
   return (
     <div className={whyStyles.whyBlock}>
-      <div className={`${whyStyles.whyIcon} ${props.icon}`}></div>
-      <h3>{props.title}</h3>
-      <p>{props.desc}</p>
+      <div className={whyStyles.whyIcon + (isReactIcon ? '' : ' ' + icon)}>
+        {isReactIcon ? icon : null}
+      </div>
+      <h3>{title}</h3>
+      <p>{desc}</p>
     </div>
   )
 }

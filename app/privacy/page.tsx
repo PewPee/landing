@@ -1,9 +1,17 @@
+import type { Metadata } from 'next'
 import ReactMarkdown from 'react-markdown'
 
-import Head from 'next/head'
-import docStyles from '../styles/Docs.module.css'
+import docStyles from '../../styles/Docs.module.css'
 
-import Layout from '../components/layout'
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description: 'PewPee Privacy Policy: how we collect, protect and use your information. We do not provide your data to third parties.',
+  openGraph: {
+    title: 'Privacy Policy — PewPee',
+    description: 'How PewPee collects and uses your information. Your data stays with us.',
+    url: 'https://pewpee.com/privacy',
+  },
+}
 
 const markdown = `
 ### 1. Introduction
@@ -157,51 +165,18 @@ We hope that you are enjoying PewPee.
 
 ---
 
-This document was last updated on May 28, 2021.
+This document was last updated on February 1, 2026.
 `
 
-export default function Privacy() {
+export default function PrivacyPage() {
   return (
-    <Layout>
-      <Head>
-        <title>PewPee – Privacy Policy</title>
-        <meta name="robots" content="all" />
-        <meta name="keywords" content="PewPee, tracks, music, listen, popular, free, online, songs, player" />
-        <meta name="description" content="PewPee is a music streaming service that allows listen to new popular songs 2022 for free online without downloading and you can try to listen to latest albums of artists on our free music player" />
-        
-        <meta property="og:site_name" content="PewPee" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="PewPee – music streaming service" />
-        <meta property="og:description" content="Powerful. Free. Zero ads." />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@PewPeeMusic" />
-        <meta name="twitter:creator" content="@PewPeeMusic" />
-
-        <meta name="telegram:channel" content="@pewpee_music" />
-        
-        <meta property="og:url" content="https://pewpee.com/en/" />
-        <meta property="og:image" content="/common-icon.png" />
-        <meta property="og:image:type" content="image/png" />
-
-        <link rel="canonical" href="https://pewpee.com/" />
-        <link rel="icon" type="images/svg+xml" href="/website-icon.svg?1" />
-        <link rel="alternate icon" type="image/x-icon" href="/favicon.ico?1" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      </Head>
-
-      <div className="main">
-        <div className={`container ${docStyles.devPageContentWrap}`}>
-          <h1>Privacy Policy</h1>
-          <div className={docStyles.devPageContent}>
-            
-            <ReactMarkdown>
-              {markdown}
-            </ReactMarkdown>
-
-          </div>
+    <div className="main">
+      <div className={`container ${docStyles.devPageContentWrap}`}>
+        <h1>Privacy Policy</h1>
+        <div className={docStyles.devPageContent}>
+          <ReactMarkdown>{markdown}</ReactMarkdown>
         </div>
       </div>
-    </Layout>
+    </div>
   )
 }
